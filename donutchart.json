@@ -4,9 +4,9 @@
   "data": {
     "url": "https://areebakhaleeq24.github.io/FIT3179/outbreaks.csv"
   },
-  "mark": {"type": "arc", "innerRadius": 50},
+ "mark": {"type": "arc", "innerRadius": 50},
   "encoding": {
-    "theta": {"aggregate": "count", "field": "Location"},
+    "theta": {"aggregate": "count","field": "Location", "type": "quantitative"},
     "color": {"field": "Location", "type": "nominal"}
   },
   "view": {"stroke": null}
