@@ -6,7 +6,7 @@
   },
   "mark": {"type": "arc", "innerRadius": 50},
   "encoding": {
-    "theta": {"field": "Location", "type": "quantitative", "aggregate": "count"},
+    "theta": {"aggregate": "count", "field": "Location"},
     "color": {"field": "Location", "type": "nominal"}
   },
   "view": {"stroke": null}
