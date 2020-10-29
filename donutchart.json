@@ -6,7 +6,7 @@
   },
  "transform": [
     {
-      "filter": "datum.Location >100"
+      "filter": {"aggregate": "count", "field": "Location", "gte": "50"}
     }
   ],
   "mark": {"type": "arc", "innerRadius": 50},
