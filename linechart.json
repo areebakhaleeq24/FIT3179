@@ -1,12 +1,26 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "description": "No, of illneses over time",
-  "data": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "description": "No, of illneses over time",
+    "data": {
     "url": "https://areebakhaleeq24.github.io/FIT3179/outbreaks.csv"
   },
-  "mark": "bar",
-  "encoding": {
-    "x": {"field": "Year", "type": "temporal"},
-    "y": {"field": "Illnesses", "type": "quantitative"}
+    "width": "container",
+    "mark": {
+      "type": "line",
+      "interpolate": "monotone"
+    },
+    "encoding": {
+      "x": {
+        "field": "Year",
+      },
+      "y": {
+        "field": "Illnesses",
+        "aggregate": "count"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "Year",
+      }
+    },
+    "config": {}
   }
-}
