@@ -6,14 +6,7 @@
   },
  "transform": [
     {
-      "window": [{
-        "op": "count",
-        "as": "count"
-      }],
-      "sort": [{ "field": "Location", "order": "descending" }]
-    },
-    {
-      "filter": "datum.count <= 5"
+      {"filter": "datum.Location >100"}
     }
   ],
   "mark": {"type": "arc", "innerRadius": 50},
