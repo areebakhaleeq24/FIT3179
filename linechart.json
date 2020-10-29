@@ -6,7 +6,7 @@
   },
   "mark": "bar",
   "encoding": {
-    "x": {"aggregate": "count", "field": "Year", "type": "temporal"},
+    "x": {"field": "Year", "type": "temporal"},
     "y": {"field": "Illnesses", "type": "quantitative"}
   }
 }
