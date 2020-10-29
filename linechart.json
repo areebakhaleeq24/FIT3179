@@ -4,23 +4,9 @@
     "data": {
     "url": "https://areebakhaleeq24.github.io/FIT3179/outbreaks.csv"
   },
-    "width": "container",
-    "mark": {
-      "type": "line",
-      "interpolate": "monotone"
-    },
-    "encoding": {
-      "x": {
-        "field": "Year",
-      },
-      "y": {
-        "field": "Illnesses",
-        "aggregate": "count"
-      },
-      "color": {
-        "type": "nominal",
-        "field": "Year",
-      }
-    },
-    "config": {}
+  "mark": "bar",
+  "encoding": {
+    "x": {"aggregate": "count", "field": "Year", "type": "temporal"},
+    "y": {"field": "Illnesses", "type": "quantitative"}
   }
+}
