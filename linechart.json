@@ -4,7 +4,7 @@
   "data": {
     "url": "https://areebakhaleeq24.github.io/FIT3179/outbreaks.csv"
   },
-  "mark": "line",
+  "mark": "bar",
   "encoding": {
     "x": {"field": "Year", "type": "temporal"},
     "y": {"field": "Illnesses", "type": "quantitative"}
