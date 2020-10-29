@@ -4,7 +4,14 @@
   "data": {
     "url": "https://areebakhaleeq24.github.io/FIT3179/outbreaks.csv"
   },
-  "transform": [
+ "transform": [
+    {
+      "window": [{
+        "op": "rank",
+        "as": "rank"
+      }],
+      "sort": [{ "field": "Location", "order": "descending" }]
+    },
     {
       "filter": "datum.rank <= 5"
     }
