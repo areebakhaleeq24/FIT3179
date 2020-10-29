@@ -7,13 +7,13 @@
  "transform": [
     {
       "window": [{
-        "op": "rank",
-        "as": "rank"
+        "op": "count",
+        "as": "count"
       }],
       "sort": [{ "field": "Location", "order": "descending" }]
     },
     {
-      "filter": "datum.rank <= 5"
+      "filter": "datum.count <= 5"
     }
   ],
   "mark": {"type": "arc", "innerRadius": 50},
