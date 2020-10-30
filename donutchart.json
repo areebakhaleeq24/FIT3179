@@ -2,23 +2,28 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "description": "A simple donut chart with embedded data.",
   "data": {
-    "url": "https://areebakhaleeq24.github.io/FIT3179/outbreaks.csv"
+    "values": [
+      {"Location": "Restaurant", "count": 11536},
+      {"Location": "Private House", "count": 1989},
+      {"Location": "Grocery Store", "count": 304},
+      {"Location": "Catering Service", "count": 1140},
+      {"Location": "School/College/University", "count": 358},
+      {"Location": "Nursing Home", "count": 186}
+      {"Location": "Camp", "count": 120},
+      {"Location": "Hospital", "count": 42},
+      {"Location": "Ouffice/Indoor Workplace", "count": 105},
+      {"Location": "Prison/Jail", "count": 193},
+      {"Location": "Child Daycare", "count": 29},
+      {"Location": "Religious Facility", "count": 110},
+      {"Location": "Unknown", "count": 355},
+      {"Location": "Fair/Festival", "count": 83},
+      {"Location": "Banquet Facility", "count": 392}
+    ]
   },
-  "transform": [
-    {
-      "window": [{
-        "op": "rank",
-        "as": "rank"
-      }],
-      "sort": [{"aggregate": "count", "field": "Location", "order": "descending" }]
-    }, {
-      "filter": "datum.rank <= 5"
-    }
-  ],
  "mark": {"type": "arc", "innerRadius": 50},
   "encoding": {
-    "theta": {"aggregate": "count","field": "Location", "type": "quantitative"},
-    "color": {"field": "Location", "type": "nominal", "sort": {"field": "Location", "op": "average", "order":"descending"}}
+    "theta": {"field": "Location", "type": "quantitative"},
+    "color": {"field": "Location", "type": "nominal"}
   },
   "view": {"stroke": null}
 }
