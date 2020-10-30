@@ -22,7 +22,7 @@
   },
  "mark": {"type": "arc", "innerRadius": 50},
   "encoding": {
-    "theta": {"field": "Location", "type": "quantitative"},
+    "theta": {"field": "count", "type": "quantitative"},
     "color": {"field": "Location", "type": "nominal"}
   },
   "view": {"stroke": null}
