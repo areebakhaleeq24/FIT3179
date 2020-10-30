@@ -4,6 +4,17 @@
   "data": {
     "url": "https://areebakhaleeq24.github.io/FIT3179/outbreaks.csv"
   },
+  "transform": [
+    {
+      "window": [{
+        "op": "rank",
+        "as": "rank"
+      }],
+      "sort": [{"aggregate": "count", "field": "Location", "order": "descending" }]
+    }, {
+      "filter": "datum.rank <= 5"
+    }
+  ],
  "mark": {"type": "arc", "innerRadius": 50},
   "encoding": {
     "theta": {"aggregate": "count","field": "Location", "type": "quantitative"},
