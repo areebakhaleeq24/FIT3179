@@ -8,15 +8,10 @@
       {"Location": "Grocery Store", "count": 304},
       {"Location": "Catering Service", "count": 1140},
       {"Location": "School/College/University", "count": 358},
-      {"Location": "Nursing Home", "count": 186}
+      {"Location": "Nursing Home", "count": 186},
       {"Location": "Camp", "count": 120},
-      {"Location": "Hospital", "count": 42},
-      {"Location": "Ouffice/Indoor Workplace", "count": 105},
       {"Location": "Prison/Jail", "count": 193},
-      {"Location": "Child Daycare", "count": 29},
-      {"Location": "Religious Facility", "count": 110},
       {"Location": "Unknown", "count": 355},
-      {"Location": "Fair/Festival", "count": 83},
       {"Location": "Banquet Facility", "count": 392}
     ]
   },
