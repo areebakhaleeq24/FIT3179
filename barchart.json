@@ -8,7 +8,12 @@
   },
   "mark": "bar",
   "encoding": {
-    "x": {"field": "Year", "type": "temporal"},
-    "y": {"field": "Illnesses", "type": "quantitative"}
+    "x": {
+      "field": "Month"
+    },
+    "y": {
+      "aggregate": "sum", "field": "Illnesses",
+      "title": "Illnesses"
+    }
   }
 }
