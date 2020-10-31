@@ -2,12 +2,11 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": 300,
   "height": 200,
-   "url": "https://areebakhaleeq24.github.io/FIT3179/outbreaks.csv"
-  },
-  "mark": "area",
+  "data": {"url": "https://areebakhaleeq24.github.io/FIT3179/outbreaks.csv"},
+  "mark": "line",
   "encoding": {
     "x": {
-      "field": "Year",
+      "field": "Year"
     },
     "y": {
       "aggregate": "sum", "field": "Illnesses",
@@ -15,3 +14,4 @@
     }
   }
 }
+
