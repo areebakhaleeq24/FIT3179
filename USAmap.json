@@ -1,0 +1,89 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Foodborne diseases in USA (1998-2015)",
+  "width": 800,
+  "height": 600,
+  "data": {
+    "url": "https://areebakhaleeq24.github.io/FIT3179/cb_2018_us_state_500k.json",
+    "format": {"type": "topojson", "feature": "cb_2018_us_state_500k"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.NAME",
+      "from": {
+        "data": {
+          "values": [
+      {"State": "Alabama", "Illnesses": 2638},
+      {"State": "Alaska", "Illnesses": 1322},
+      {"State": "Arizona", "Illnesses": 5059},
+      {"State": "Arkansas", "Illnesses": 2383},
+      {"State": "California", "Illnesses": 39992},
+      {"State": "Colorado", "Illnesses": 10099},
+      {"State": "Connecticut", "Illnesses": 4151},
+      {"State": "Delaware", "Illnesses": 229},
+      {"State": "Florida", "Illnesses": 23050},
+      {"State": "Georgia", "Illnesses": 10070},
+      {"State": "Hawaii", "Illnesses": 3558},
+      {"State": "Idaho", "Illnesses": 1829},
+      {"State": "Illinois", "Illnesses": 24700},
+      {"State": "Indiana", "Illnesses": 3286},
+      {"State": "Iowa", "Illnesses": 4866},
+      {"State": "Kansas", "Illnesses": 5791},
+      {"State": "Kentucky", "Illnesses": 712},
+      {"State": "Louisiana", "Illnesses": 4169},
+      {"State": "Maine", "Illnesses": 4857},
+      {"State": "Maryland", "Illnesses": 9474},
+      {"State": "Massachusetts", "Illnesses": 6453},
+      {"State": "Michigan", "Illnesses": 14471},
+      {"State": "Minnesota", "Illnesses": 13533},
+      {"State": "Mississippi", "Illnesses": 1402},
+      {"State": "Missouri", "Illnesses": 4042},
+      {"State": "Montana", "Illnesses": 1300},
+      {"State": "Nebraska", "Illnesses": 919},
+      {"State": "Nevada", "Illnesses": 2828},
+      {"State": "New Hampshire", "Illnesses": 1933},
+      {"State": "New Jersey", "Illnesses": 4322},
+      {"State": "New Mexico", "Illnesses": 1466},
+      {"State": "New York", "Illnesses": 17407},
+      {"State": "North Carolina", "Illnesses": 6421},
+      {"State": "North Dakota", "Illnesses": 2765},
+      {"State": "Ohio", "Illnesses": 20451},
+      {"State": "Oklahoma", "Illnesses": 2163},
+      {"State": "Oregon", "Illnesses": 8960},
+      {"State": "Pennsylvania", "Illnesses": 11374},
+      {"State": "Rhode Island", "Illnesses": 1171},
+      {"State": "South Carolina", "Illnesses": 4730},
+      {"State": "South Dakota", "Illnesses": 681},
+      {"State": "Tennessee", "Illnesses": 7475},
+      {"State": "Texas", "Illnesses": 14187},
+      {"State": "Utah", "Illnesses": 2350},
+      {"State": "Vermont", "Illnesses": 511},
+      {"State": "Virginia", "Illnesses": 7167},
+      {"State": "Washington", "Illnesses": 9804},
+      {"State": "West Virginia", "Illnesses": 1091},
+      {"State": "Wisconsin", "Illnesses": 11014},
+      {"State": "Wyoming", "Illnesses": 1720}
+    ]
+        },
+        "key": "State",
+        "fields": ["Illnesses"]
+      }
+    }
+  ],
+  "projection": {"type": "albersUsa"},
+  "mark": {"type": "geoshape"},
+  "encoding": {
+    "color": {
+      "field": "Illnesses",
+      "type": "quantitative",
+      "scale": {
+        "type": "ordinal"
+ }
+
+    },
+    "tooltip": [
+      {"field": "properties.NAME", "type": "nominal", "title": "State"},
+      {"field": "Illnesses", "type": "quantitative"}
+    ]
+  }
+}
