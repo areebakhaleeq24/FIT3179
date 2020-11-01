@@ -5,7 +5,7 @@
   "data": {
       "url": "https://areebakhaleeq24.github.io/FIT3179/outbreaks.csv"
   },
-  "title": "Daily Max Temperatures (C) in Seattle, WA",
+  "title": "Spread of illnesses over the months",
   "config": {
       "view": {
           "strokeWidth": 0,
