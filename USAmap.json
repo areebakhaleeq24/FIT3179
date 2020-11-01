@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": "Foodborne diseases in USA (1998-2015)",
-  "width": 600,
-  "height": 600,
+  "width": 850,
+  "height": 500,
   "data": {
     "url": "https://areebakhaleeq24.github.io/FIT3179/cb_2018_us_state_500k.json",
     "format": {"type": "topojson", "feature": "cb_2018_us_state_500k"}
