@@ -6,15 +6,6 @@
       "url": "https://areebakhaleeq24.github.io/FIT3179/outbreaks.csv"
   },
   "title": "Spread of illnesses over the months",
-  "config": {
-      "view": {
-          "strokeWidth": 0,
-          "step": 13
-      },
-      "axis": {
-          "domain": false
-      }
-  },
   "mark": "rect",
   "encoding": {
       "x": {
