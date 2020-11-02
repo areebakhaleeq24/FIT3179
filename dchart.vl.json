@@ -28,7 +28,8 @@
           "#48D1CC",
           "#7FFFD4"
         ]
-      }
+      },
+      "legend": null
     },
     "order": {"field": "count", "sort": "ascending"},
     "tooltip": [
