@@ -1,26 +1,28 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 270,
-  "height": 270,
+  "width": 250,
+  "height": 300,
   "description": "A simple donut chart with embedded data.",
   "data": {
     "values": [
       {"Location": "Restaurant", "count": 11536},
       {"Location": "Private House", "count": 1989},
-      {"Location": "Grocery Store", "count": 304},
       {"Location": "Catering Service", "count": 1140},
       {"Location": "School/College/University", "count": 358},
-      {"Location": "Nursing Home", "count": 186},
-      {"Location": "Camp", "count": 120},
-      {"Location": "Prison/Jail", "count": 193},
       {"Location": "Unknown", "count": 355},
       {"Location": "Banquet Facility", "count": 392}
     ]
   },
+  
  "mark": {"type": "arc", "innerRadius": 50},
   "encoding": {
     "theta": {"field": "count", "type": "quantitative"},
-    "color": {"field": "Location", "type": "nominal"}
+    "color": {"field": "Location", "type": "nominal", "scale": { "range": ["#90EE90","#20B2AA","#1E90FF","#00008B", "#48D1CC","#7FFFD4"]}},
+    "order": {"field": "count", "sort": "ascending"},
+    "tooltip": [
+      {"field": "Location", "type": "nominal"},
+      {"field": "count", "type": "quantitative"}]
   },
+  
   "view": {"stroke": null}
 }
